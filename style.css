@@ -1,0 +1,193 @@
+*{font-family:monospace}
+/* h2{text-align:center;} */
+/*h1{text-align:center;}*/
+
+
+ul {list-style-type: none;
+    font-size:30px;
+    margin: 0 0 30px 0}
+
+ul.nav li:before{content:"\21B  "; color:green;}
+ul.nav li:hover:before{content:"\5B  "; color:red;}
+ul.drop{display:none; position:absolute;}
+ul.nav li.down:hover ul.drop{display:block;}
+
+.logo{display: inline-block;
+    width: 19%;
+    vertical-align:top;}
+.task_bar{display: inline-block;
+    width: 80%;
+    vertical-align:top;}
+
+.cont{margin:10px auto;
+    width:1170px;
+    padding:10px;
+    border:black 2px solid;
+    border-radius:200px;}
+
+.cont:hover{border-radius:0px;}
+
+/* p{border-radius:20px;  */
+    /* background-color:red; */
+    /* width:60%; */
+    /* margin: 0 auto; */
+    /* padding: 5px 20px; */
+    /* text-align: canter;} */
+
+ ul.nav li{float:left;}
+ ul.drop li{float: none;}
+ .clear{clear:both;}
+ 
+ .slider{background-image:url(css/slider-bg.png);
+    background-repeat:repeat-x;
+    animation:slide 3s;
+    background-position:bottom;}
+
+.icon {
+    display: inline-block;
+    width: 29.8%;
+    text-align: center;
+    padding: 0px 18px;
+}
+
+.left-txt, .image{display:inline-block;
+    width:49.5%;}
+
+.left-txt{vertical-align:top;
+padding:102px 0px;
+animation: slider_to_right 700ms cubic-bezier(.19,1,.22,1) 200ms both;
+}
+@keyframes slider_to_right
+{
+    0% {
+        filter:opacity(0);
+        transform:translateX(-2000px);
+    }
+}
+
+img.hill{width:100%;
+animation:hill 1000ms 1 200ms linear both;
+}
+.image{position:relative;}
+img.house{position:absolute;top: 50%;left: 18%;width: 69%;
+animation:hill 1200ms 1 800ms linear both;}
+img.sun{position:absolute;top: 44%;left: 24%;width: 16%; z-index:1;
+animation:sun 500ms 1 1200ms linear both;}
+img.birds1{position:absolute;top: 53%;left: 1%;width: 21%;
+animation: birds1 400ms 1 1200ms linear both;}
+img.birds2{position:absolute;top: 39%;left: 80%;width: 15%;
+animation: birds2 400ms 1 1200ms linear both;}
+
+.nav a:link{color:red;
+transition: all 1s ease 0s}
+.nav a:hover{color:blue;}
+.nav a:visited{color:gray;}
+.nav a:active{color:green;}
+
+
+@keyframes hill{
+    0%{transform:translateY(-2000px);
+    filter: opacity(0);}
+    60%{transform:translateY(30px);
+    filter:opacity(1);}
+    80%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+@keyframes sun{
+    0%{
+        filter:opacity(0);
+        transform:scale(0);
+    }
+    100%{
+        filter:opacity(1);
+        transform:scale(1);
+    }
+}
+@keyframes birds1{
+    0%{
+        filter:opacity(0);
+        transform:translateX(-10px);
+    }
+    100%{transform:translateX(0px);}
+    
+}
+@keyframes birds2{
+    0%{
+        filter:opacity(0);
+        transform:translateX(110px);
+    }
+    100%{transform:translateX(0px);}
+}
+@keyframes slide{
+    0%{background-position-x:0px;}
+    100%{background-position-x:3000px;}
+}
+
+
+.cont .icon:nth-child(1){animation:icon 1000ms 300ms both;}
+.cont .icon:nth-child(2){animation:icon 1000ms 600ms both;}
+.cont .icon:nth-child(3){animation:icon 1000ms 900ms both;}
+
+@keyframes icon{
+    0%{filter:opacity(0);}
+    /* 100%{filter:opacity(1);} */
+}
+
+.cont .icon:nth-child(1) img{animation:imgicon 1000ms 300ms both;}
+.cont .icon:nth-child(2) img{animation:imgicon 1000ms 600ms both;}
+.cont .icon:nth-child(3) img{animation:imgicon 1000ms 900ms both;}
+
+@keyframes imgicon{
+    0%{filter:opacity(0);
+    transform:scale(0);}
+    /* 100%{filter:opacity(1); */
+    /* transform:scale(1);} */
+}
+
+.s-text, .photo{
+    display: inline-block;
+    width: 49%;
+    vertical-align:top;
+}
+.photo{
+    width:40%;
+}
+.s-text{
+    padding: 35px 0px;
+}
+
+
+.abilities .single:nth-child(odd){text-align:left;}
+.abilities .single:nth-child(even){text-align:right;}
+
+
+.abilities .single:nth-child(odd) .s-text{animation: paralel_left 1000ms 800ms both;}
+.abilities .single:nth-child(odd) .photo{animation: paralel_right 1000ms 800ms both;}
+.abilities .single:nth-child(even) .s-text{animation: paralel_right 1000ms 800ms both;}
+.abilities .single:nth-child(even) .photo{animation: paralel_left 1000ms 800ms both;}
+
+@keyframes paralel_left
+{
+    0%{filter: opacity(0);
+        transform: translateX(40px); }
+}
+@keyframes paralel_right
+{
+    0%{filter: opacity(0);
+        transform: translateX(-40px);
+    }
+}
+
+
+
+
+/* p{} */
+/* h1{} */
+/* h2{text-align:center;} */
+/* body{color:red;} */
+/* span{color:black;} */
+/* div{text-align:center;} */
+/* div.blocki{font-size:24px;} */
+/* .bocki{color:green} */
+/* #blocki{} */
+/* .blocki.first.book */
